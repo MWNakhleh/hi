@@ -18,10 +18,10 @@ int main(void)
 				write(1,"A",1);
 			else if (r == x && (c == 1 || c == y))
 				write(1,"C",1);
-			else if (r == 1 ||  c == 1 || r == x || c == y)
-				write (1,"B",1);
-			else
+			else if (r != 1 &&  c != 1 && r != y && c != x)
 				write (1," ",1);
+			else
+				write (1,"B",1);
 			r++;
 		}
 		c++;
